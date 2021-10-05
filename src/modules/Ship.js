@@ -4,16 +4,7 @@ export default class Ship {
         this.life = len;
         this.isSunk = false;
         this.isVertical = false;
-        this.body = [];
-        this.body = initBody();
-
-        function initBody() {
-            let arr = [];
-            for (let i = 0; i < len; i++) {
-                arr.push(0); // set to be 0, means not hit
-            }
-            return arr;
-        }
+        this.body = new Array(len).fill(0);
 
         const hit = (pos) => {
             //pos index from 1

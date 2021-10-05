@@ -13,7 +13,6 @@ test("new Ship(6) object", () => {
     expect(ship1.getIsSunk()).toBe(false);
     ship1.hit(4);
     expect(ship1.getIsSunk()).toBe(true);
-
     expect(ship1.getIsVertical()).toBe(false);
     ship1.setIsVertical(true);
     expect(ship1.getIsVertical()).toBe(true);

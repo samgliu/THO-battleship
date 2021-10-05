@@ -1,7 +1,7 @@
 {
   "name": "battleship",
   "version": "1.0.0",
-  "description": "battleship game THO",
+  "description": "THO battleship game ",
   "private": true,
   "scripts": {
     "test": "jest",

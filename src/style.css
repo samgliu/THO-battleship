@@ -1,0 +1,37 @@
+body {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: sans-serif;
+}
+.canvas {
+    display: grid;
+    background-color: rgb(215, 215, 243);
+    padding: 10px;
+}
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.grid-item:hover {
+    background-color: rgba(160, 208, 247, 0.8);
+}
+
+.grid-item-ship {
+    background-color: rgba(29, 6, 233, 0.8);
+}
+.grid-item-ship-water {
+    background-color: rgba(111, 186, 247, 0.8);
+}
+.grid-item-ship-hit {
+    background-color: rgba(175, 59, 30, 0.8);
+}
+#p1container,
+#p2container {
+    margin: 20px 20px 20px 20px;
+    width: 320px;
+    display: inline-block;
+}
