@@ -8,6 +8,12 @@
         <div id="header">
             <h2>Battleship</h2>
         </div>
+        <div id="controls">
+            <button id="place" onclick="placeShip();">Place</button>
+            <button onclick="start();">Auto Start</button>
+            <button onclick="refresh();">Refresh</button>
+        </div>
+        <div id="msg"></div>
         <div id="p1container" class="container">
             Player
             <div id="p1can" class="canvas"></div>
@@ -15,6 +21,12 @@
         <div id="p2container" class="container">
             Computer
             <div id="p2can" class="canvas"></div>
+        </div>
+
+        <div id="displayShipContainer" class="container">
+            Current Ship
+            <button id="place" onclick="dodgeDirection();">Rotate</button>
+            <div id="shcan" class="canvas" value="1"></div>
         </div>
 
         <script src="bundle.js"></script>

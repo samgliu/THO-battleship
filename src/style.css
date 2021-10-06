@@ -35,3 +35,16 @@ body {
     width: 320px;
     display: inline-block;
 }
+
+#displayShipContainer {
+    width: 180px;
+    height: 180px;
+    display: inline-block;
+}
+
+button {
+    border: none;
+    font-size: 0.7em;
+    background-color: rgb(173, 192, 247);
+    cursor: pointer;
+}

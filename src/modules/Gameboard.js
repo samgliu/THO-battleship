@@ -13,10 +13,13 @@ export default class Gameboard {
 
         const getBoard = () => board;
         const getIsLose = () => isLose;
+        const setIsLose = (tf) => (isLose = tf); // testing purpose
 
-        const validPos = (aship, row, col) => {
+        const validPos = (aship, rrow, ccol) => {
             let len = aship.getLength();
             let direction = aship.getIsVertical(); // false: horizontal; true; vertical
+            let row = parseInt(rrow, 10);
+            let col = parseInt(ccol, 10);
             if (direction) {
                 return verticalValid(row, col, len);
             } else {
@@ -53,6 +56,13 @@ export default class Gameboard {
             }
         }
 
+        function markHorizontal(row, col, len) {
+            //console.log(row + col + len);
+            for (let j = 0; j < len; j++) {
+                board[row][col + j] = 1; // mark 1 means ship is here
+            }
+        }
+
         function verticalValid(row, col, len) {
             let count = 0;
             for (let i = row; i < 10; i++) {
@@ -65,12 +75,6 @@ export default class Gameboard {
                 } else {
                     return false; // ocupied
                 }
-            }
-        }
-
-        function markHorizontal(row, col, len) {
-            for (let j = 0; j < len; j++) {
-                board[row][col + j] = 1; // mark 1 means ship is here
             }
         }
 
@@ -102,6 +106,7 @@ export default class Gameboard {
 
         return {
             getBoard,
+            setIsLose,
             getIsLose,
             validPos,
             receiveAttack,
