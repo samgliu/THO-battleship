@@ -208,9 +208,6 @@ function AIattackII() {
         AIattack();
     } else {
         if (AIIndex > 0) {
-            console.log("AIIndex " + AIIndex);
-            console.log("lastHitCol " + lastHitCol);
-            console.log("lastHitRow " + lastHitRow);
             if (AIIndex === 1) {
                 if (
                     lastHitCol - 1 >= 0 &&
